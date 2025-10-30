@@ -30,8 +30,8 @@ function App() {
 
   const filteredData = value.filter(
     (item, i) =>
-      item.author.toLowerCase().includes(searchTerm) ||
-      item.book.toLowerCase().includes(searchTerm)
+      item.author.toLowerCase().startsWith(searchTerm) ||
+      item.book.toLowerCase().startsWith(searchTerm)
   );
 
   const handleDelete = (i: number) => {
